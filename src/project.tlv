@@ -44,11 +44,11 @@
 \TLV calc()
    |calc
       @1
-        $reset = *reset;
-        $val2[7:0] = {4'b0, *ui_in[3:0]} ; 
-        $op[1:0] = *ui_in[5:4] ;
-        $equals_in = *ui_in[7] ;
-        $val1[7:0] = >>1$out;
+         $reset = *reset;
+         $val2[7:0] = {4'b0, *ui_in[3:0]} ; 
+         $op[1:0] = *ui_in[5:4] ;
+         $equals_in = *ui_in[7] ;
+         $val1[7:0] = >>1$out;
          //$val2[7:0] = 8'b1;
          //$val2[7:0] = {5'b00000, $rand2[2:0]};
          //$op[1:0] = 2'b0;
@@ -57,7 +57,7 @@
             $reset
                ? 8'b0 :
             $valid
-               ? 
+               ?
             $op[1:0] == 2'b00
                ? $val1 + $val2 :
             $op[1:0] == 2'b01
